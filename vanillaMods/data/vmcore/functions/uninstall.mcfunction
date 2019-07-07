@@ -1,0 +1,2 @@
+scoreboard objectives remove vm_status
+scoreboard objectives remove vm_console

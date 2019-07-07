@@ -1,0 +1,9 @@
+tellraw @s [{"text":"\n\n\n>>> VanillaMod Console <<<\n","color":"green","bold":true,"underlined":true}]
+
+tellraw @s [{"text":"EnderHopper:  ","color":"dark_purple","bold":true},{"text":"[off]","color":"dark_red","clickEvent":{"action":"run_command","value":"/execute if score #eh_active vm_status > #off vm_status run scoreboard players set #eh_active vm_status -1"},"bold":false},{"text":" ","color":"none"},{"text":"[on]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/execute if score #eh_active vm_status < #on vm_status run scoreboard players set #eh_active vm_status 2"}}]
+tellraw @s [{"text":"EnderTag:  ","color":"dark_purple","bold":true},{"text":"[off]","color":"dark_red","clickEvent":{"action":"run_command","value":"/execute if score #et_active vm_status > #off vm_status run scoreboard players set #et_active vm_status -1"},"bold":false},{"text":" ","color":"none"},{"text":"[on]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/execute if score #et_active vm_status < #on vm_status run scoreboard players set #et_active vm_status 2"}}]
+tellraw @s [{"text":"SeedMod:  ","color":"dark_green","bold":true},{"text":"[off]","color":"dark_red","clickEvent":{"action":"run_command","value":"/execute if score #sm_active vm_status > #off vm_status run scoreboard players set #sm_active vm_status -1"},"bold":false},{"text":" ","color":"none"},{"text":"[on]","color":"green","bold":false,"clickEvent":{"action":"run_command","value":"/execute if score #sm_active vm_status < #on vm_status run scoreboard players set #sm_active vm_status 2"}}]
+
+tellraw @s [{"text":"\n[Click here to get all necessary items for testing purpose.]","color":"green","clickEvent":{"action":"run_command","value":"/function vmcore:give"},"bold":true}]
+scoreboard players reset @s vm_console
+scoreboard players enable @s vm_console
