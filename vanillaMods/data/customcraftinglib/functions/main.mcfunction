@@ -7,8 +7,8 @@ execute as @e[tag=cclcraft1] at @s run execute as @e[tag=cclcraft2,limit=1,sort=
 execute as @e[tag=cclcraft1] at @s run execute as @e[tag=cclcraft2,limit=1,sort=nearest,distance=..0.5] at @s run kill @e[type=item,distance=..0.5]
 
 #Place Control
-execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s if block ~ ~ ~ #customcraftinglib:gases run setblock ~ ~ ~ minecraft:dropper[facing=down]{CustomName:"{\"text\":\"Golden Crafting Table\",\"color\":\"gold\",\"bold\":\"true\"}"} replace
-execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s run tp @s ~ ~-0.37 ~
+execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s align xyz if block ~0.5 ~0.5 ~0.5 #customcraftinglib:gases run setblock ~0.5 ~ ~0.5 minecraft:dropper[facing=down]{CustomName:"{\"text\":\"Golden Crafting Table\",\"color\":\"gold\",\"bold\":\"true\"}"} replace
+execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s align xyz run tp @s ~0.5 ~-0.37 ~0.5
 execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s run tag @s add old
 execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=new] at @s run tag @s remove new
 
@@ -23,4 +23,4 @@ execute as @e[name=ccl_gct,type=armor_stand,tag=old] at @s if entity @p[distance
 
 execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=ccl_gct_empty] at @s if entity @p[distance=..20] run tag @s remove ccl_gct_empty
 execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=!ccl_gct_empty] at @s if entity @p[distance=..20] if block ~ ~1 ~ dropper{Items:[]} run tag @s add ccl_gct_empty
-execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=!ccl_gct_empty] at @s if entity @p[distance=..20] run function #customcraftinglib:recipes
+execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=!ccl_gct_empty] at @s if entity @p[distance=..20] run function vmcore:cclib_recipes_control
