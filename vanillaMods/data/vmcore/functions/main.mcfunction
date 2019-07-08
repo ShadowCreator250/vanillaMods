@@ -26,6 +26,9 @@ execute if score #et_active vm_status matches 2.. run scoreboard players set #et
 execute if score #sm_active vm_status matches 2.. run function seedmod:load
 execute if score #sm_active vm_status matches 2.. run scoreboard players set #sm_active vm_status 1
 
+execute if score #bb_active vm_status matches 2.. run function blockbreaker:load
+execute if score #bb_active vm_status matches 2.. run scoreboard players set #bb_active vm_status 1
+
 # Mod Unload/Uninstall Control
 execute if score #eh_active vm_status matches ..-1 run function enderhopper:unload
 execute if score #eh_active vm_status matches ..-1 run scoreboard players set #eh_active vm_status 0
@@ -36,8 +39,12 @@ execute if score #et_active vm_status matches ..-1 run scoreboard players set #e
 execute if score #sm_active vm_status matches ..-1 run function seedmod:unload
 execute if score #sm_active vm_status matches ..-1 run scoreboard players set #sm_active vm_status 0
 
+execute if score #bb_active vm_status matches ..-1 run function blockbreaker:unload
+execute if score #bb_active vm_status matches ..-1 run scoreboard players set #bb_active vm_status 0
+
 # Mod Tick Control
 execute run function customcraftinglib:main
 execute if score #eh_active vm_status matches 1 run function enderhopper:main
 execute if score #et_active vm_status matches 1 run function endertag:main
 execute if score #sm_active vm_status matches 1 run function seedmod:main
+execute if score #bb_active vm_status matches 1 run function blockbreaker:main
