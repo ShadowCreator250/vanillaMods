@@ -9,7 +9,6 @@
 #"customcraftinglib:load"
 
 # setup
-execute if score #setup vm_status matches ..0 run function customcraftinglib:load
 execute if score #setup vm_status matches ..0 run function vmcore:setup
 
 # Console Control
@@ -28,13 +27,13 @@ execute if score #sm_active vm_status matches 2.. run function seedmod:load
 execute if score #sm_active vm_status matches 2.. run scoreboard players set #sm_active vm_status 1
 
 # Mod Unload/Uninstall Control
-execute if score #eh_active vm_status matches ..-1 run say hi.2
+execute if score #eh_active vm_status matches ..-1 run function enderhopper:unload
 execute if score #eh_active vm_status matches ..-1 run scoreboard players set #eh_active vm_status 0
 
-execute if score #et_active vm_status matches ..-1 run say hi.3
+execute if score #et_active vm_status matches ..-1 run function endertag:unload
 execute if score #et_active vm_status matches ..-1 run scoreboard players set #et_active vm_status 0
 
-execute if score #sm_active vm_status matches ..-1 run say hi.4
+execute if score #sm_active vm_status matches ..-1 run function seedmod:unload
 execute if score #sm_active vm_status matches ..-1 run scoreboard players set #sm_active vm_status 0
 
 # Mod Tick Control
