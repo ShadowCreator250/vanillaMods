@@ -13,6 +13,7 @@ execute if score #setup vm_status matches ..0 run function customcraftinglib:loa
 execute if score #setup vm_status matches ..0 run function vmcore:setup
 
 # Console Control
+scoreboard players reset @a[tag=!vm_admin] vm_console
 scoreboard players enable @a[tag=vm_admin] vm_console
 execute as @a[scores={vm_console=1..}] at @s run function vmcore:consoletext
 
@@ -41,5 +42,3 @@ execute run function customcraftinglib:main
 execute if score #eh_active vm_status matches 1 run function enderhopper:main
 execute if score #et_active vm_status matches 1 run function endertag:main
 execute if score #sm_active vm_status matches 1 run function seedmod:main
-
-# TODO: give button (blue) for every mod; uninstall button vm_console for vm_core; Let the machies work under water -> include water in #gases
