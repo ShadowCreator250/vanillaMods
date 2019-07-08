@@ -1,0 +1,8 @@
+{
+	"replace":false,
+  "values":[
+	"customcraftinglib:ccl_recipes",
+	"endertag:recipe",
+	"enderhopper:recipes"
+  ]
+}
