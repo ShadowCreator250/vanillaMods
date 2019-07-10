@@ -6,6 +6,7 @@ execute as @e[name=EnderHopper,type=armor_stand,tag=old,tag=new] at @s run tag @
 # Destroy Control
 execute as @a at @s as @e[name=EnderHopper,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~ ~ #vmcore:noblocks run function enderhopper:give
 execute as @a at @s as @e[name=EnderHopper,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~ ~ #vmcore:noblocks run particle minecraft:block minecraft:iron_block ~ ~0.5 ~ 0.5 0.5 0.5 0.0001 30
+execute as @a at @s as @e[name=EnderHopper,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~ ~ #vmcore:noblocks run kill @e[type=item,distance=..2,limit=1,sort=nearest,nbt={Item:{id:"minecraft:hopper"}}]
 execute as @a at @s as @e[name=EnderHopper,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~ ~ #vmcore:noblocks run kill @s
 
 # Life-Time-Actions

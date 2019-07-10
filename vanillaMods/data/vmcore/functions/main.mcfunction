@@ -1,13 +1,3 @@
-#"enderhopper:main",
-#"seedmod:main",
-#"endertag:main",
-#"customcraftinglib:main"
-
-#"enderhopper:load",
-#"seedmod:load",
-#"endertag:load",
-#"customcraftinglib:load"
-
 # setup
 execute if score #setup vm_status matches ..0 run function vmcore:setup
 

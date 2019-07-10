@@ -15,6 +15,7 @@ execute as @e[name=ccl_gct,type=armor_stand,tag=old,tag=new] at @s run tag @s re
 # Destroy Control
 execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~1 ~ #vmcore:noblocks run function customcraftinglib:give
 execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~1 ~ #vmcore:noblocks run particle minecraft:block minecraft:iron_block ~ ~1 ~ 0.5 0.5 0.5 0.0001 30
+execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~1 ~ #vmcore:noblocks run kill @e[type=item,distance=..2,limit=1,sort=nearest,nbt={Item:{id:"minecraft:dropper"}}]
 execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~1 ~ #vmcore:noblocks run kill @s
 
 # Life-Time-Actions
