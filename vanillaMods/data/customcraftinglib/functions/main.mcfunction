@@ -1,10 +1,12 @@
 # Item Control
-tag @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b}}] add cclcraft1
-tag @e[type=item,nbt={Item:{id:"minecraft:dropper",Count:1b}}] add cclcraft2
+tag @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b},OnGround:1b}] add cclcraft1
+tag @e[type=item,nbt={Item:{id:"minecraft:gold_block",Count:1b},OnGround:1b}] add cclcraft
+tag @e[type=item,nbt={Item:{id:"minecraft:dropper",Count:1b},OnGround:1b}] add cclcraft2
+tag @e[type=item,nbt={Item:{id:"minecraft:dropper",Count:1b},OnGround:1b}] add cclcraft
 
 # Crafting Control
 execute as @e[tag=cclcraft1] at @s run execute as @e[tag=cclcraft2,limit=1,sort=nearest,distance=..0.5] at @s run function customcraftinglib:give
-execute as @e[tag=cclcraft1] at @s run execute as @e[tag=cclcraft2,limit=1,sort=nearest,distance=..0.5] at @s run kill @e[type=item,distance=..0.5]
+execute as @e[tag=cclcraft1] at @s run execute as @e[tag=cclcraft2,limit=1,sort=nearest,distance=..0.5] at @s run kill @e[type=item,distance=..0.5,tag=cclcraft]
 
 #Place Control
 execute as @e[name=ccl_gct,type=armor_stand,tag=!old,tag=new] at @s if block ~ ~ ~ #vmcore:noblocks run setblock ~ ~ ~ minecraft:dropper[facing=down]{CustomName:"{\"text\":\"Golden Crafting Table\",\"color\":\"gold\",\"bold\":\"true\"}"} replace
