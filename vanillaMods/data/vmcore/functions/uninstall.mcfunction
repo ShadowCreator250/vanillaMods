@@ -1,3 +1,6 @@
+function vmcore:setup
+function #vmcore:uninstalls
+function vmcore:general_uninstall
 scoreboard objectives remove vm_status
 scoreboard objectives remove vm_console
 tag @a[tag=vm_admin] remove vm_admin

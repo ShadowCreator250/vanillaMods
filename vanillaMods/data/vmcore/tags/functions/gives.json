@@ -1,9 +1,9 @@
 {
-	"replace":false,
   "values":[
 	"customcraftinglib:give_advanced",
-	"endertag:give",
-	"enderhopper:give_advanced",
-	"seedmod:give"
+  	"endertag:give_advanced",
+  	"enderhopper:give_advanced",
+  	"seedmod:give",
+  	"blockbreaker:give"
   ]
 }
