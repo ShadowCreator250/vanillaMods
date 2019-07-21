@@ -26,4 +26,4 @@ execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] a
 
 execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s run tag @s remove ccl_gct_empty
 execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s if block ~ ~1 ~ dropper{Items:[]} run tag @s add ccl_gct_empty
-execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20] at @s run function vmcore:cclib_recipes_control
+execute as @a at @s as @e[name=ccl_gct,type=armor_stand,tag=old,distance=..20,tag=!ccl_gct_empty] at @s run function vmcore:cclib_recipes_control

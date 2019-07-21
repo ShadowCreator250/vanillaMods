@@ -1,0 +1,10 @@
+{
+  "values":[
+	"customcraftinglib:give_advanced",
+  	"endertag:give_advanced",
+  	"enderhopper:give_advanced",
+  	"seedmod:give_advanced",
+  	"blockbreaker:give_advanced",
+	"lumberaxe:give_advanced"
+  ]
+}

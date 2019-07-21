@@ -3,6 +3,7 @@
 	"blockbreaker:uninstall",
 	"customcraftinglib:uninstall",
 	"enderhopper:uninstall",
-	"endertag:uninstall"
+	"endertag:uninstall",
+	"lumberaxe:uninstall"
   ]
 }
