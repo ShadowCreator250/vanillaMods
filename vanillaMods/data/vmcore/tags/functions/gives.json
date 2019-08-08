@@ -5,6 +5,7 @@
   	"enderhopper:give",
   	"seedmod:give",
   	"blockbreaker:give",
-	"lumberaxe:give"
+	"lumberaxe:give",
+	"autofields:give"
   ]
 }

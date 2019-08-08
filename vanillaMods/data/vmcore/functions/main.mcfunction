@@ -23,6 +23,9 @@ execute if score #bb_active vm_status matches 2.. run scoreboard players set #bb
 execute if score #la_active vm_status matches 2.. run function lumberaxe:load
 execute if score #la_active vm_status matches 2.. run scoreboard players set #la_active vm_status 1
 
+execute if score #af_active vm_status matches 2.. run function autofields:load
+execute if score #af_active vm_status matches 2.. run scoreboard players set #af_active vm_status 1
+
 # Mod Unload/Uninstall Control
 execute if score #eh_active vm_status matches ..-1 run function enderhopper:unload
 execute if score #eh_active vm_status matches ..-1 run scoreboard players set #eh_active vm_status 0
@@ -39,6 +42,9 @@ execute if score #bb_active vm_status matches ..-1 run scoreboard players set #b
 execute if score #la_active vm_status matches ..-1 run function lumberaxe:unload
 execute if score #la_active vm_status matches ..-1 run scoreboard players set #la_active vm_status 0
 
+execute if score #af_active vm_status matches ..-1 run function autofields:unload
+execute if score #af_active vm_status matches ..-1 run scoreboard players set #af_active vm_status 0
+
 # Mod Tick Control
 execute run function customcraftinglib:main
 execute if score #eh_active vm_status matches 1 run function enderhopper:main
@@ -46,3 +52,4 @@ execute if score #et_active vm_status matches 1 run function endertag:main
 execute if score #sm_active vm_status matches 1 run function seedmod:main
 execute if score #bb_active vm_status matches 1 run function blockbreaker:main
 execute if score #la_active vm_status matches 1 run function lumberaxe:main
+execute if score #af_active vm_status matches 1 run function autofields:main

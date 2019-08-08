@@ -4,6 +4,7 @@
 	"customcraftinglib:uninstall",
 	"enderhopper:uninstall",
 	"endertag:uninstall",
-	"lumberaxe:uninstall"
+	"lumberaxe:uninstall",
+	"autofields:uninstall"
   ]
 }
