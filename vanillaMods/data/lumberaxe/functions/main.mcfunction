@@ -79,11 +79,10 @@ execute as @a[scores={la_saw=1..}] at @s run scoreboard players set @s la_saw 0
 
 ## tag control
 tag @a[tag=la_axe] remove la_axe
-tag @a[nbt={SelectedItem:{id:"minecraft:golden_axe",Count:1b,tag:{display:{Name:"{\"text\":\"LumberAxe\",\"color\":\"aqua\"}",Lore:["§bThis axe chops down whole trees"]}}}},tag=!la_axe] add la_axe
+tag @a[gamemode=survival,nbt={SelectedItem:{id:"minecraft:golden_axe",Count:1b,tag:{display:{Name:"{\"text\":\"LumberAxe\",\"color\":\"aqua\"}",Lore:['{"text":"This axe chops down whole trees.","color":"aqua"},{"text":"For it to be working you have to be in survival mode.","color":"aqua"}']}}}},tag=!la_axe] add la_axe
 
-execute as @a[tag=la_axe,scores={la_used=1..,la_block_mined=1..}] at @s run say @s
 execute as @a[tag=la_axe,scores={la_used=1..,la_block_mined=1..}] at @s run function lumberaxe:items_tag
-execute as @a[tag=la_axe,scores={la_used=1..,la_block_mined=1..}] at @s run data merge entity @e[type=item,distance=..6,tag=la_item,sort=nearest,limit=1] {Motion:[0.0d,0.0d,0.0d],NoGravity:1b}
+execute as @a[tag=la_axe,scores={la_used=1..,la_block_mined=1..}] at @s run data merge entity @e[type=item,distance=..6,tag=la_item,sort=nearest,limit=1] {Motion:[0.0d,-0.1d,0.0d],NoGravity:1b}
 execute as @a[tag=la_axe,scores={la_used=1..,la_block_mined=1..}] at @s run function lumberaxe:raycast_init
 execute as @a[tag=la_axe,scores={la_used=1..}] at @s run scoreboard players set @s la_used 0
 execute as @a[tag=la_axe,scores={la_block_mined=1..}] at @s run scoreboard players set @s la_block_mined 0

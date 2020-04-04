@@ -26,5 +26,5 @@ scoreboard objectives remove la_aw
 scoreboard objectives remove la_saw
 kill @e[type=area_effect_cloud,tag=la_rayaxe]
 kill @e[type=area_effect_cloud,tag=la_chopcloud]
-clear @a golden_axe{display:{Name:"{\"text\":\"LumberAxe\",\"color\":\"aqua\"}",Lore:["§bThis axe chops down whole trees"]}}
+clear @a golden_axe{display:{Name:"{\"text\":\"LumberAxe\",\"color\":\"aqua\"}",Lore:['{"text":"This axe chops down whole trees.","color":"aqua"},{"text":"For it to be working you have to be in survival mode.","color":"aqua"}']}}
 tag @a[tag=la_axe] remove la_axe

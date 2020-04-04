@@ -4,8 +4,7 @@ execute if score #setup vm_status matches ..0 run function vmcore:setup
 # Console Control
 scoreboard players reset @a[tag=!vm_admin] vm_console
 scoreboard players enable @a[tag=vm_admin] vm_console
-execute as @a[scores={vm_console=1..}] at @s if score #console_type vm_status matches 1 run function vmcore:consoletext
-execute as @a[scores={vm_console=1..}] at @s if score #console_type vm_status matches 0 run function vmcore:give_console
+execute as @a[scores={vm_console=1..}] at @s run function vmcore:give_console
 
 # Mod Load Control
 execute if score #eh_active vm_status matches 2.. run function enderhopper:load

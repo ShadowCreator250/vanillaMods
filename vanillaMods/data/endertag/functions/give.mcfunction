@@ -1,1 +1,1 @@
-give @p[limit=1,distance=..5,sort=nearest] minecraft:name_tag{display:{Name:"{\"text\":\"EnderTag\",\"color\":\"dark_purple\"}",Lore:["§bThis item teleports all nearby items to you."]}} 1
+give @p[limit=1,distance=..5,sort=nearest] minecraft:name_tag{display:{Name:"{\"text\":\"EnderTag\",\"color\":\"dark_purple\"}",Lore:['{"text":"This item teleports all nearby items to you.","color":"aqua"}']}} 1
